@@ -1,3 +1,5 @@
+import 'package:book_app/features/const.dart';
+import 'package:book_app/features/splash/presentation/view/splash_view.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,8 +12,14 @@ class BookApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: primaryColor),
       title: 'BookApp',
+      home: const SplashView(),
     );
   }
 }
+
+// package download
+//? get
