@@ -1,14 +1,15 @@
 import 'package:book_app/features/const.dart';
 import 'package:book_app/features/splash/presentation/view/splash_view.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:get/get.dart';
 
 void main() {
-  runApp(BookApp());
+  Get.config(enableLog: false); // Disable logs from GetX
+  runApp(const BookApp());
 }
 
 class BookApp extends StatelessWidget {
-  BookApp({super.key});
+  const BookApp({super.key});
 
   // This widget is the root of your application.
   @override
@@ -17,10 +18,11 @@ class BookApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: primaryColor),
       title: 'BookApp',
-      home: SplashView(),
+      home: const SplashView(),
     );
   }
 }
 
 // package download
 //? get
+//? font_awesome_flutter (Icon)

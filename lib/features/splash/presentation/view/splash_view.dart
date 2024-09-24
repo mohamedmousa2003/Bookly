@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class SplashView extends StatefulWidget {
-  SplashView({super.key});
+  const SplashView({super.key});
 
   static const routeName = '/splash';
 
@@ -43,7 +43,6 @@ class _SplashViewState extends State<SplashView>
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Image.asset(AssetsData.splash),
-            const SizedBox(height: 20),
             SlidingText(slidingAnimation: slidingAnimation)
           ],
         ),
